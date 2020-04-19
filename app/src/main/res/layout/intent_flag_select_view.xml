@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|start">
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_new_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_NEW_TASK"/>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_clear_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_CLEAR_TOP"/>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_single_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_SINGLE_TOP"/>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_clear_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_CLEAR_TASK"/>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_reorder_to_front"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_REORDER_TO_FRONT"/>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_finish_after_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="call finish() after intent"/>
+</LinearLayout>
