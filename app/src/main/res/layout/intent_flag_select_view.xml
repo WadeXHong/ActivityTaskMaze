@@ -30,6 +30,11 @@
         android:layout_height="wrap_content"
         android:text="FLAG_ACTIVITY_REORDER_TO_FRONT"/>
     <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_random_bundle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add random bundle"/>
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/checkbox_finish_after_intent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
