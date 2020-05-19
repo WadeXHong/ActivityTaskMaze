@@ -13,23 +13,33 @@
         <activity android:name=".BaseActivity" />
 
         <activity android:name=".MainActivity"
-            android:launchMode="singleInstance"
-            android:taskAffinity="com.bardxhong.activitytaskmaze.main">
+            android:launchMode="standard">
+<!--            android:taskAffinity="com.bardxhong.activitytaskmaze.main">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".BaseActivity$SingleInstanceActivity"
+        <activity android:name=".BaseActivity$Standard_Activity"
+            android:launchMode="standard" />
+
+        <activity android:name=".BaseActivity$SingleInstance_Activity"
             android:launchMode="singleInstance" />
 
-        <activity android:name=".BaseActivity$SingleTopActivity"
+        <activity android:name=".BaseActivity$SingleIntance_Affinity_Activity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.bardxhong.activitytaskmaze.affinity"/>
+
+        <activity android:name=".BaseActivity$SingleTop_Activity"
             android:launchMode="singleTop" />
 
-        <activity android:name=".BaseActivity$SingleTaskActivity"
+        <activity android:name=".BaseActivity$SingleTask_Activity"
             android:launchMode="singleTask" />
 
+        <activity android:name=".BaseActivity$SingleTask_Affinity_Activity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.bardxhong.activitytaskmaze.affinity"/>
     </application>
 
 </manifest>

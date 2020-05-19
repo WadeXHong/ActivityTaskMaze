@@ -60,11 +60,15 @@ open class BaseActivity : AppCompatActivity() {
 
     class Standard_Activity : BaseActivity()
 
-    class SingleTopActivity : BaseActivity()
+    class SingleTop_Activity : BaseActivity()
 
-    class SingleTaskActivity : BaseActivity()
+    class SingleTask_Activity : BaseActivity()
 
-    class SingleInstanceActivity : BaseActivity()
+    class SingleTask_Affinity_Activity : BaseActivity()
+
+    class SingleInstance_Activity : BaseActivity()
+
+    class SingleIntance_Affinity_Activity: BaseActivity()
 }
 
 
