@@ -21,25 +21,33 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".BaseActivity$Standard_Activity"
+        <activity android:name=".BaseActivity$Standard"
             android:launchMode="standard" />
 
-        <activity android:name=".BaseActivity$SingleInstance_Activity"
+        <activity android:name=".BaseActivity$Standard_Affinity"
+            android:launchMode="standard"
+            android:taskAffinity=".affinity"/>
+
+        <activity android:name=".BaseActivity$SingleInstance"
             android:launchMode="singleInstance" />
 
-        <activity android:name=".BaseActivity$SingleIntance_Affinity_Activity"
+        <activity android:name=".BaseActivity$SingleIntance_Affinity"
             android:launchMode="singleInstance"
-            android:taskAffinity="com.bardxhong.activitytaskmaze.affinity"/>
+            android:taskAffinity=".affinity"/>
 
-        <activity android:name=".BaseActivity$SingleTop_Activity"
+        <activity android:name=".BaseActivity$SingleTop"
             android:launchMode="singleTop" />
 
-        <activity android:name=".BaseActivity$SingleTask_Activity"
+        <activity android:name=".BaseActivity$SingleTop_Affinity"
+            android:launchMode="singleTop"
+            android:taskAffinity=".affinity"/>
+
+        <activity android:name=".BaseActivity$SingleTask"
             android:launchMode="singleTask" />
 
-        <activity android:name=".BaseActivity$SingleTask_Affinity_Activity"
+        <activity android:name=".BaseActivity$SingleTask_Affinity"
             android:launchMode="singleTask"
-            android:taskAffinity="com.bardxhong.activitytaskmaze.affinity"/>
+            android:taskAffinity=".affinity"/>
     </application>
 
 </manifest>

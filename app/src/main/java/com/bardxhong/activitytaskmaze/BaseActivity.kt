@@ -58,17 +58,21 @@ open class BaseActivity : AppCompatActivity() {
         Log.d("TaskInformation", "FLAG_ACTIVITY_CLEAR_TASK: ${intent?.flags?:0 and FLAG_ACTIVITY_CLEAR_TASK == FLAG_ACTIVITY_CLEAR_TASK}")
     }
 
-    class Standard_Activity : BaseActivity()
+    class Standard : BaseActivity()
 
-    class SingleTop_Activity : BaseActivity()
+    class Standard_Affinity : BaseActivity()
 
-    class SingleTask_Activity : BaseActivity()
+    class SingleTop : BaseActivity()
 
-    class SingleTask_Affinity_Activity : BaseActivity()
+    class SingleTop_Affinity : BaseActivity()
 
-    class SingleInstance_Activity : BaseActivity()
+    class SingleTask : BaseActivity()
 
-    class SingleIntance_Affinity_Activity: BaseActivity()
+    class SingleTask_Affinity : BaseActivity()
+
+    class SingleInstance : BaseActivity()
+
+    class SingleIntance_Affinity: BaseActivity()
 }
 
 
