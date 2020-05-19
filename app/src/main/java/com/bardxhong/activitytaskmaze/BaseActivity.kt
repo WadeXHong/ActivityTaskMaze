@@ -1,6 +1,7 @@
 package com.bardxhong.activitytaskmaze
 
 import android.content.Intent
+import android.content.Intent.*
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,9 +14,7 @@ open class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.base_activity)
         activity_name.text = componentName.shortClassName
-
-        Log.i("TaskInformation", "className: ${componentName.shortClassName}, taskId: $taskId, flags: ${intent.flags.toString(16)}")
-
+        logIntent(intent)
         val rootView = activity_root
         val someActivityList = BaseActivity::class.nestedClasses
         someActivityList.forEach { kClass ->
@@ -48,9 +47,18 @@ open class BaseActivity : AppCompatActivity() {
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         Log.i("TaskInformation", "onNewIntent called")
-        Log.i("TaskInformation", "className: ${componentName.shortClassName}, taskId: $taskId, flags: ${intent?.flags?.toString(16)}")
+        logIntent(intent)
     }
 
+    private fun logIntent(intent: Intent?) {
+        Log.i("TaskInformation", "className: ${componentName.shortClassName}, ref: ${toString().replace(javaClass.name, "")}, taskId: $taskId, flags: ${intent?.flags?.toString(16)}")
+        Log.d("TaskInformation", "FLAG_ACTIVITY_NEW_TASK: ${intent?.flags?:0 and FLAG_ACTIVITY_NEW_TASK == FLAG_ACTIVITY_NEW_TASK}")
+        Log.d("TaskInformation", "FLAG_ACTIVITY_CLEAR_TOP: ${intent?.flags?:0 and FLAG_ACTIVITY_CLEAR_TOP == FLAG_ACTIVITY_CLEAR_TOP}")
+        Log.d("TaskInformation", "FLAG_ACTIVITY_SINGLE_TOP: ${intent?.flags?:0 and FLAG_ACTIVITY_SINGLE_TOP == FLAG_ACTIVITY_SINGLE_TOP}")
+        Log.d("TaskInformation", "FLAG_ACTIVITY_CLEAR_TASK: ${intent?.flags?:0 and FLAG_ACTIVITY_CLEAR_TASK == FLAG_ACTIVITY_CLEAR_TASK}")
+    }
+
+    class Standard_Activity : BaseActivity()
 
     class SingleTopActivity : BaseActivity()
 
