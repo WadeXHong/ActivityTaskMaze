@@ -26,6 +26,7 @@ class StartIntentButton @JvmOverloads constructor(
                     if (selectView.cbClearTop.isChecked) intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     if (selectView.cbSingleTop.isChecked) intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
                     if (selectView.cbClearTask.isChecked) intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    if (selectView.cbMultiTask.isChecked) intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
                     if (selectView.cbReorderToFront.isChecked) intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
                     if (selectView.cbRandomBundle.isChecked) intent.putExtra(System.currentTimeMillis().toString(), System.currentTimeMillis())
                     context.startActivity(intent).also {

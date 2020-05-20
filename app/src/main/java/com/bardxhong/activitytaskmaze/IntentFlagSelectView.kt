@@ -19,6 +19,7 @@ class IntentFlagSelectView constructor(
     val cbClearTop: AppCompatCheckBox by lazy { findViewById<AppCompatCheckBox>(R.id.checkbox_clear_top) }
     val cbSingleTop: AppCompatCheckBox by lazy { findViewById<AppCompatCheckBox>(R.id.checkbox_single_top) }
     val cbClearTask: AppCompatCheckBox by lazy { findViewById<AppCompatCheckBox>(R.id.checkbox_clear_task) }
+    val cbMultiTask: AppCompatCheckBox by lazy { findViewById<AppCompatCheckBox>(R.id.checkbox_multi_task) }
     val cbReorderToFront: AppCompatCheckBox by lazy { findViewById<AppCompatCheckBox>(R.id.checkbox_reorder_to_front) }
     val cbRandomBundle: AppCompatCheckBox by lazy { findViewById<AppCompatCheckBox>(R.id.checkbox_random_bundle) }
     val cbIsCallFinish: AppCompatCheckBox by lazy { findViewById<AppCompatCheckBox>(R.id.checkbox_finish_after_intent) }

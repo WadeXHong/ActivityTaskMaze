@@ -14,6 +14,7 @@ open class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.base_activity)
         activity_name.text = componentName.shortClassName
+        task_id.text = "taskId: $taskId, isRoot: $isTaskRoot"
         logIntent(intent)
         val rootView = activity_root
         val someActivityList = BaseActivity::class.nestedClasses
@@ -56,6 +57,12 @@ open class BaseActivity : AppCompatActivity() {
         Log.d("TaskInformation", "FLAG_ACTIVITY_CLEAR_TOP: ${intent?.flags?:0 and FLAG_ACTIVITY_CLEAR_TOP == FLAG_ACTIVITY_CLEAR_TOP}")
         Log.d("TaskInformation", "FLAG_ACTIVITY_SINGLE_TOP: ${intent?.flags?:0 and FLAG_ACTIVITY_SINGLE_TOP == FLAG_ACTIVITY_SINGLE_TOP}")
         Log.d("TaskInformation", "FLAG_ACTIVITY_CLEAR_TASK: ${intent?.flags?:0 and FLAG_ACTIVITY_CLEAR_TASK == FLAG_ACTIVITY_CLEAR_TASK}")
+        Log.d("TaskInformation", "FLAG_ACTIVITY_BROUGHT_TO_FRONT: ${intent?.flags?:0 and FLAG_ACTIVITY_BROUGHT_TO_FRONT == FLAG_ACTIVITY_BROUGHT_TO_FRONT}")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        task_id.text = "taskId: $taskId, isRoot: $isTaskRoot"
     }
 
     class Standard : BaseActivity()

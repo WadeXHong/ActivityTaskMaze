@@ -25,6 +25,11 @@
         android:layout_height="wrap_content"
         android:text="FLAG_ACTIVITY_CLEAR_TASK"/>
     <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_multi_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_MULTI_TASK"/>
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/checkbox_reorder_to_front"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
